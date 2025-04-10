@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Swiper cdn -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+</head>
+<body class="h-full text-gray-800">
+
+    <header>
+
+        <!-- Navigation -->
+        <nav class="bg-gray-100 dark:bg-gray-900 dark:border-gray-700">
+
+            <!-- Logo and name -->
+            <div class="max-w-4/5 flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap">MMA community</span>
+                </a>
+
+                <!-- Mobile Screen Menu button -->
+                <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-multi-level" aria-expanded="false">
+
+                    <!-- Burger -->
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+
+                </button>
+
+                <!-- Menu -->
+                <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                    <ul class="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+
+                        <li>
+                            <a href="posts.html" class="block py-2 px-3 text-gray-800 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600">Journeys</a>
+                        </li>
+                        <li>
+                            <a href="events.html" class="block py-2 px-3 text-gray-800 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600">Events</a>
+                        </li>
+
+                        <!-- Log in  -->
+                        <li>
+                            <a href="login.html" class="px-4 py-2 border-1 border-red-600 font-medium tracking-wide text-white capitalize transition-all duration-300 bg-red-600 rounded-sm hover:bg-red-500  hover:border-red-600 hover:text-red-600 hover:bg-white">Log in | Sign up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Poster -->
+        <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
+
+            <div class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+                <div class="mx-auto max-w-prose text-center">
+                    <h1 class="text-4xl font-bold text-gray-800 sm:text-5xl">
+                    Understand user flow and
+                    <strong class="text-red-600"> increase </strong>
+                    conversions
+                    </h1>
+            
+                    <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident
+                    accusamus impedit minima harum corporis iusto.
+                    </p>
+            
+                    <div class="mt-4 flex justify-center gap-4 sm:mt-6">
+                        <a class="inline-block rounded border border-red-600 bg-red-600 px-5 py-3 font-medium text-white shadow-sm transition-colors duration-300 hover:bg-red-500">
+                            Get Started
+                        </a>
+                
+                        <a
+                            class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
+                            href="#">
+                            Learn More
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section>
+
+            <div class="w-4/5 mx-auto">
+                <h1 class="font-bold text-3xl mb-10">Past events:</h1>
+
+                <div class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
+                    <div>   
+
+                         <!-- Event 1 -->
+                        <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                            <div class="px-4 py-2">
+                                <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                            </div>
+                        
+                            <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                        </div>
+
+                        <!-- Event 2 -->
+                        <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                            <div class="px-4 py-2">
+                                <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                            </div>
+                        
+                            <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                        </div>
+                        
+                        <!-- Event 3 -->
+                        <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                            <div class="px-4 py-2">
+                                <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                            </div>
+                        
+                            <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                        </div>
+
+                        <!-- Event 4 -->
+                        <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                            <div class="px-4 py-2">
+                                <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                            </div>
+                        
+                            <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                        </div>
+
+                    </div>
+                   
+                    
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Future Events -->
+        <section class="mt-20">
+
+            <div class="w-4/5 mx-auto">
+                <h1 class="font-bold text-3xl mb-10">Upcoming events:</h1>
+
+                <div class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
+                    <!-- Event 1 -->
+                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div class="px-4 py-2">
+                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                        </div>
+                    
+                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div class="px-4 py-2">
+                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                        </div>
+                    
+                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div class="px-4 py-2">
+                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                        </div>
+                    
+                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div class="px-4 py-2">
+                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                        </div>
+                    
+                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+    <footer class="mt-15 bg-gray-100 text-gray-800 body-font">
+
+        <div class="max-w-4/5 mx-auto container py-8 mx-auto flex items-center sm:flex-row flex-col">
+
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+
+                <span><a href="index.html" class="self-center text-2xl font-semibold whitespace-nowrap">MMA community</a></span>
+
+          </a>
+
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">&copy; 2025 Lav Raicevic
+          </p>
+          
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+    </footer>
+
+
+        <!-- Swiper control -->
+        <script>
+        
+            const swiper = new Swiper('.swiper', {
+    
+                direction: "horizontal",
+                loop: true,
+                slidesPerView: 3,
+                autoplay: {
+                    delay: 2000
+                },
+                spaceBetween:40,
+                navigation: {
+                    nextEl: ".button-next",
+                    prevEl: ".button-prev",
+                }
+    
+            });
+        </script>
+    
+</body>
+</html>
