@@ -7,11 +7,7 @@
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <!-- Swiper cdn -->
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
 <body class="h-full text-gray-800">
@@ -96,10 +92,38 @@
         <!-- Past Events -->
         <section>
 
-            <div class="w-4/5 mx-auto">
-                <h1 class="font-bold text-3xl mb-10">Past events:</h1>
+            <!-- Past events drop down -->
+            <div 
+            x-data="{
+                open: false,
+                toggle(){
+                    this.open = this.open ? this.close() : true
+                },
+                close(){
+                    this.open = false
+                }
+            }"
+            x-id="['dropdown-button']"
+            class="relative w-4/5 mx-auto">
 
-                <div class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
+                <!-- Dropdown button -->
+                <h1 role="button" @click="toggle()" 
+                :aria-expanded="open" 
+                :aria-controls="$id('dropdown-button')"
+                :class="open ? 'text-left' : 'text-center'"
+                x-transition.duration.400ms
+                x-transition.duration.300ms
+                class="font-bold  text-3xl mb-10 cursor-pointer">Past events:</h1>
+                
+                <!-- Dropdown show -->
+                <div
+                x-show="open"
+                @click.outside="close()"
+                :id="$id('dropdown-button')"
+                x-transition:enter.opacity.scale.origin.top.duration.400ms
+                x-transition:leave.opacity.scale.origin.bottom.duration.300ms
+                class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
+
                     <!-- Event 1 -->
                     <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
                         <div class="px-4 py-2">
@@ -139,19 +163,53 @@
                     
                         <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
                     </div>
+
+                    <!-- Event 4 -->
+                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div class="px-4 py-2">
+                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
+                        </div>
+                    
+                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
+                    </div>
                     
                 </div>
+                
             </div>
             
         </section>
 
         <!-- Future Events -->
-        <section class="mt-20">
+        <section>
 
-            <div class="w-4/5 mx-auto">
-                <h1 class="font-bold text-3xl mb-10">Upcoming events:</h1>
-
-                <div class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
+            <!-- Future events dropdown -->
+            <div 
+            x-data="{
+                open: false,
+                toggle(){
+                    this.open = this.open ? this.close() : true
+                },
+                close(){
+                    this.open = false
+                }
+            }"
+            x-id="['dropdown-button']"
+            class="relative w-4/5 mx-auto">
+                <!-- Dropdown button -->
+                <h1 role="button" @click="toggle()" 
+                :aria-expanded="open" 
+                :aria-controls="$id('dropdown-button')"
+                class="font-bold text-center text-3xl mb-10 cursor-pointer">Upcoming events:</h1>
+                
+                <!-- Dropdown show -->
+                <div
+                x-show="open"
+                @click.outside="close()"
+                :id="$id('dropdown-button')"
+                x-transition:enter.opacity.scale.origin.top.duration.500ms
+                x-transition:leave.opacity.scale.origin.bottom.duration.400ms
+                class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
                     <!-- Event 1 -->
                     <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
                         <div class="px-4 py-2">
