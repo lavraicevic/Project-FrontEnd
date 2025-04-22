@@ -34,19 +34,27 @@
 
                 <!-- Menu -->
                 <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+                    
                     <ul class="flex flex-col items-center font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
 
                         <li>
                             <a href="posts.html" class="block py-2 px-3 text-gray-800 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600">Journeys</a>
                         </li>
+
                         <li>
                             <a href="events.html" class="block py-2 px-3 text-gray-800 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-red-600">Events</a>
                         </li>
 
-                        <!-- Log in  -->
+                        <!-- Create post  -->
                         <li>
-                            <a href="login.html" class="px-4 py-2 border-1 border-red-600 font-medium tracking-wide text-white capitalize transition-all duration-300 bg-red-600 rounded-sm hover:bg-red-500  hover:border-red-600 hover:text-red-600 hover:bg-white">Log in | Sign up</a>
+                            <a href="http://mini-app.test/posts" class="px-4 py-2 border-2 flex gap-2 border-red-600 font-medium tracking-wide text-white capitalize transition-all duration-300 bg-red-600 rounded-sm hover:bg-red-500  hover:border-red-600 hover:text-red-600 hover:bg-white">Create post 
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>                                  
+                            </a>
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -125,95 +133,9 @@
         <!-- ALl Posts -->
         <section>
 
-            <div class="grid grod-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 grid-rows-auto w-4/5 mx-auto">  
+            <div id="display" class="grid grod-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 grid-rows-auto w-4/5 mx-auto">  
 
-                <!-- One post -->
-                <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article">
-                
-                    <div class="p-6">
-                        <div>
-                            <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">I Built A Successful Blog In One Year</a>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.</p>
-                        </div>
-                
-                        <div class="mt-4">
-                            <div class="flex items-center">
-                                <div class="flex items-center">
-                                    <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link">Jone Doe</a>
-                                </div>
-                                <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- One post -->
-                <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article">
-                
-                    <div class="p-6">
-                        <div>
-                            <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">I Built A Successful Blog In One Year</a>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.</p>
-                        </div>
-                
-                        <div class="mt-4">
-                            <div class="flex items-center">
-                                <div class="flex items-center">
-                                    <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link">Jone Doe</a>
-                                </div>
-                                <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- One post -->
-                <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-                    <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article">
-                
-                    <div class="p-6">
-                        <div>
-                            <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">I Built A Successful Blog In One Year</a>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.</p>
-                        </div>
-                
-                        <div class="mt-4">
-                            <div class="flex items-center">
-                                <div class="flex items-center">
-                                    <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                                    <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link">Jone Doe</a>
-                                </div>
-                                <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-               <!-- One post -->
-               <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-                <img class="object-cover w-full h-64" src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Article">
-            
-                <div class="p-6">
-                    <div>
-                        <a href="#" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">I Built A Successful Blog In One Year</a>
-                        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie parturient et sem ipsum volutpat vel. Natoque sem et aliquam mauris egestas quam volutpat viverra. In pretium nec senectus erat. Et malesuada lobortis.</p>
-                    </div>
-            
-                    <div class="mt-4">
-                        <div class="flex items-center">
-                            <div class="flex items-center">
-                                <img class="object-cover h-10 rounded-full" src="https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=48&q=60" alt="Avatar">
-                                <a href="#" class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link">Jone Doe</a>
-                            </div>
-                            <span class="mx-1 text-xs text-gray-600 dark:text-gray-300">21 SEP 2015</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
 
             </div>
         </section>
