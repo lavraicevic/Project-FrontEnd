@@ -19,7 +19,7 @@ axios({
         let userName = document.createElement('p')
         let date = document.createElement('span')
 
-        container.classList.add("max-w-2xl", "overflow-hidden", "bg-white", "rounded-lg", "shadow-md", "border-1")
+        container.classList.add("swiper-slide", "max-w-2xl", "overflow-hidden", "bg-white", "rounded-lg", "shadow-md", "border-1")
 
         image.classList.add("object-cover", "w-full", "h-64")
         image.src = "http://mini-app.test/assets/" + post.picture

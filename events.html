@@ -95,10 +95,10 @@
             </div>
         </section>
 
-        <!-- Past Events -->
+        <!-- Events -->
         <section>
 
-            <!-- Past events drop down -->
+            <!-- Events drop down -->
             <div 
             x-data="{
                 open: false,
@@ -128,57 +128,9 @@
                 :id="$id('dropdown-button')"
                 x-transition:enter.opacity.scale.origin.top.duration.400ms
                 x-transition:leave.opacity.scale.origin.bottom.duration.300ms
+                id="display"
                 class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
 
-                    <!-- Event 1 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-
-                    <!-- Event 4 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-
-                    <!-- Event 4 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
                     
                 </div>
                 
@@ -186,80 +138,7 @@
             
         </section>
 
-        <!-- Future Events -->
-        <section>
-
-            <!-- Future events dropdown -->
-            <div 
-            x-data="{
-                open: false,
-                toggle(){
-                    this.open = this.open ? this.close() : true
-                },
-                close(){
-                    this.open = false
-                }
-            }"
-            x-id="['dropdown-button']"
-            class="relative w-4/5 mx-auto">
-                <!-- Dropdown button -->
-                <h1 role="button" @click="toggle()" 
-                :aria-expanded="open" 
-                :aria-controls="$id('dropdown-button')"
-                class="font-bold text-center text-3xl mb-10 cursor-pointer">Upcoming events:</h1>
-                
-                <!-- Dropdown show -->
-                <div
-                x-show="open"
-                @click.outside="close()"
-                :id="$id('dropdown-button')"
-                x-transition:enter.opacity.scale.origin.top.duration.500ms
-                x-transition:leave.opacity.scale.origin.bottom.duration.400ms
-                class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
-                    <!-- Event 1 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-
-                    <!-- Event 4 -->
-                    <div class="max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
-                        <div class="px-4 py-2">
-                            <h1 class="text-xl font-bold text-gray-800 uppercase dark:text-white">NIKE AIR</h1>
-                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quos quidem sequi illum facere recusandae voluptatibus</p>
-                        </div>
-                    
-                        <img class="object-cover w-full h-48 mt-2" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=320&q=80" alt="NIKE AIR">
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </section>
+        
     </main>
 
 
@@ -303,7 +182,10 @@
         </div>
     </footer>
 
+    <!-- AXIOS JS -->
+    <script  src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    
+    <!-- EVENTS API -->
+    <script src="js/eventsApi.js"></script>
 </body>
 </html>
