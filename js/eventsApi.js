@@ -12,7 +12,7 @@ axios({
     response.data.forEach(event => {
 
         // Creating needed elements
-        let container = document.createElement('div')
+        let container = document.createElement('a')
         let textHolder = document.createElement('div')
         let title = document.createElement('h1')
         let body = document.createElement('p')
@@ -20,6 +20,11 @@ axios({
 
         // Adding classes, atributtes, values and content to every element
         container.classList.add("max-w-xs", "overflow-hidden", "bg-white", "rounded-lg", "shadow-lg");
+
+        // Adding a link for a website for a singular event
+        container.href = "event.html?id=" + event.id
+
+        console.log(container.href)
 
         textHolder.classList.add("px-4", "py-2");
 

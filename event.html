@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community</title>
+    <title>Document</title>
+    
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <!-- ALPINE -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
 </head>
-<body class="h-full text-gray-800">
-
+<body>
     <header>
 
         <!-- Navigation -->
@@ -62,86 +58,21 @@
 
     </header>
 
-    <main>
-        <!-- Poster -->
-        <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
+    <main class="mt-10 grid place-content-center">
 
-            <div class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-                <div class="mx-auto max-w-prose text-center">
-                    <h1 class="text-4xl font-bold text-gray-800 sm:text-5xl">
-                    Understand user flow and
-                    <strong class="text-red-600"> increase </strong>
-                    conversions
-                    </h1>
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+
+            <img id="poster" class="rounded-t-lg w-full" src="https://upload.wikimedia.org/wikipedia/en/3/36/Jake_Paul_vs._Mike_Tyson_fight_poster.jpg" alt="" />
             
-                    <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident
-                    accusamus impedit minima harum corporis iusto.
-                    </p>
-            
-                    <div class="mt-4 flex justify-center gap-4 sm:mt-6">
-                        <a class="inline-block rounded border border-red-600 bg-red-600 px-5 py-3 font-medium text-white shadow-sm transition-colors duration-300 hover:bg-red-500">
-                            Get Started
-                        </a>
+            <div class="p-5">
                 
-                        <a
-                            class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-                            href="#">
-                            Learn More
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Events -->
-        <section>
-
-            <!-- Events drop down -->
-            <div 
-            x-data="{
-                open: false,
-                toggle(){
-                    this.open = this.open ? this.close() : true
-                },
-                close(){
-                    this.open = false
-                }
-            }"
-            x-id="['dropdown-button']"
-            class="relative w-4/5 mx-auto">
-
-                <!-- Dropdown button -->
-                <h1 role="button" @click="toggle()" 
-                :aria-expanded="open" 
-                :aria-controls="$id('dropdown-button')"
-                :class="open ? 'text-left' : 'text-center'"
-                x-transition.duration.400ms
-                x-transition.duration.300ms
-                class="font-bold  text-3xl mb-10 cursor-pointer">Events:</h1>
+                <h5 id="title" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
                 
-                <!-- Dropdown show -->
-                <div
-                x-show="open"
-                @click.outside="close()"
-                :id="$id('dropdown-button')"
-                x-transition:enter.opacity.scale.origin.top.duration.400ms
-                x-transition:leave.opacity.scale.origin.bottom.duration.300ms
-                id="display"
-                class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
-
-                    
-                </div>
+                <p id="body" class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
                 
             </div>
-            
-        </section>
-
-        
+        </div>
     </main>
-
 
     <footer class="mt-15 bg-gray-100 text-gray-800 body-font">
 
@@ -182,11 +113,11 @@
           </span>
         </div>
     </footer>
-
+    
     <!-- AXIOS JS -->
     <script  src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- EVENTS API -->
-    <script src="js/eventsApi.js"></script>
+    
+    <!-- API -->
+    <script src="js/singularEvent.js"></script>
 </body>
 </html>
