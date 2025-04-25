@@ -1,13 +1,15 @@
-
+// Defining where to show elements
 const display = document.getElementById("display")
+// Defining the API link
 const url = 'http://mini-app.test/api/posts'
-
+// Creating API
 axios({
     method: 'get',
     url: url
 }).then(function(response){
     response.data.forEach(post => {
-        let container = document.createElement('div')
+        // Creating needed elements 
+        let container = document.createElement('a')
         let image = document.createElement('img')
         let textHolder = document.createElement('div')
         let contentHolder = document.createElement('div')
@@ -19,14 +21,19 @@ axios({
         let userName = document.createElement('p')
         let date = document.createElement('span')
 
-        container.classList.add("swiper-slide", "max-w-2xl", "overflow-hidden", "bg-white", "rounded-lg", "shadow-md", "border-1")
+        // Adding classes, atributtes, values and content to every element
+        container.classList.add("swiper-slide", "max-w-2xl", "overflow-hidden", "bg-white", "rounded-lg", "shadow-md", "border-1", "cursor-pointer")
+
+        // Adding a link for a website for a singular event
+        container.href = "post.html?id=" + post.id
+        console.log(post.id)
 
         image.classList.add("object-cover", "w-full", "h-64")
         image.src = "http://mini-app.test/assets/" + post.picture
         
         contentHolder.classList.add("p-6")
 
-        title.classList.add("block", "mt-2", "text-xl", "font-semibold", "text-gray-800", "transition-colors", "duration-300", "transform", "hover:text-gray-600", "hover:underline")
+        title.classList.add("block", "mt-2", "text-xl", "font-semibold", "text-gray-800", "transition-colors", "duration-300", "transform", "hover:text-gray-600")
         title.textContent = post.title
         
         body.classList.add("mt-2", "text-sm","text-gray-600")
@@ -46,6 +53,7 @@ axios({
         date.classList.add("mx-1", "text-xs", "text-gray-600")
         date.textContent = "21 SEP 2015"
 
+        //Apending content to the elements
         container.append(image)
         container.append(contentHolder)
 
@@ -61,6 +69,7 @@ axios({
         pictureTitleHolder.append(profilePic)
         pictureTitleHolder.append(userName)
         
+        // Appending content to the page
         display.append(container)
 
     });

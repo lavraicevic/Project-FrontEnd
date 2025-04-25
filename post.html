@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community</title>
+    <title>Document</title>
+    
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-
 </head>
-<body class="h-full text-gray-800">
-
+<body>
     <header>
 
         <!-- Navigation -->
@@ -60,86 +58,48 @@
 
     </header>
 
-    <main>
-        <!-- Poster -->
-        <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
+    <main class="mt-10 grid place-content-center">
 
-            <div class="mx-auto w-screen max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
-                <div class="mx-auto max-w-prose text-center">
-                    <h1 class="text-4xl font-bold text-gray-800 sm:text-5xl">
-                    Understand user flow and
-                    <strong class="text-red-600"> increase </strong>
-                    conversions
-                    </h1>
-            
-                    <p class="mt-4 text-base text-pretty text-gray-700 sm:text-lg/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nisi. Natus, provident
-                    accusamus impedit minima harum corporis iusto.
-                    </p>
-            
-                    <div class="mt-4 flex justify-center gap-4 sm:mt-6">
-                        <a class="inline-block rounded border border-red-600 bg-red-600 px-5 py-3 font-medium text-white shadow-sm transition-colors duration-300 hover:bg-red-500">
-                            Get Started
-                        </a>
-                
-                        <a
-                            class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900"
-                            href="#">
-                            Learn More
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Events -->
-        <section>
-
-            <!-- Events drop down -->
-            <div 
-            x-data="{
-                open: false,
-                toggle(){
-                    this.open = this.open ? this.close() : true
-                },
-                close(){
-                    this.open = false
-                }
-            }"
-            x-id="['dropdown-button']"
-            class="relative w-4/5 mx-auto">
-
-                <!-- Dropdown button -->
-                <h1 role="button" @click="toggle()" 
-                :aria-expanded="open" 
-                :aria-controls="$id('dropdown-button')"
-                :class="open ? 'text-left' : 'text-center'"
-                x-transition.duration.400ms
-                x-transition.duration.300ms
-                class="font-bold  text-3xl mb-10 cursor-pointer">Events:</h1>
-                
-                <!-- Dropdown show -->
-                <div
-                x-show="open"
-                @click.outside="close()"
-                :id="$id('dropdown-button')"
-                x-transition:enter.opacity.scale.origin.top.duration.400ms
-                x-transition:leave.opacity.scale.origin.bottom.duration.300ms
-                id="display"
-                class="grid grod-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 grid-rows-auto w-full">
-
-                    
-                </div>
-                
-            </div>
-            
-        </section>
-
+        <div class="max-w-2xl overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <img id="picture" class="object-cover w-full h-64" src="" alt="Article">
         
-    </main>
+            <div class="p-6">
+                <div>
+                    <p  id="title" href="" class="block mt-2 text-xl font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600" tabindex="0" role="link"></a>
 
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400" id="body"></p>
+                </div>
+        
+                <div class="mt-4">
+                    <div class="flex items-center">
+                        <div class="flex items-center">
+                            <img id="picture" class="object-cover h-10 rounded-full" src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg" alt="Avatar">
+
+                            <p  class="mx-2 font-semibold text-gray-700 dark:text-gray-200" tabindex="0" role="link" id="userName"></a>
+                        </div>
+                        <span class="mx-1 text-xs text-gray-600 dark:text-gray-300" id="date">21 SEP 2015</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <div id="comments">
+        
+             
+        </div>
+
+        <form method="post" action="http://mini-app.test/comment">
+            <div class="mb-5">
+                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">New comment</label>
+                <input type="text" name="comment" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Add a comment" required />
+
+                <input type="radio" name="postID" id="postID" class="hidden"></input>
+
+                <button type="submit" class="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+              </div>
+        </form>
+    </main>
 
     <footer class="mt-15 bg-gray-100 text-gray-800 body-font">
 
@@ -180,11 +140,11 @@
           </span>
         </div>
     </footer>
-
+    
     <!-- AXIOS JS -->
     <script  src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <!-- EVENTS API -->
-    <script src="js/eventsApi.js"></script>
+    
+    <!-- API -->
+    <script src="js/singularPost.js"></script>
 </body>
 </html>
